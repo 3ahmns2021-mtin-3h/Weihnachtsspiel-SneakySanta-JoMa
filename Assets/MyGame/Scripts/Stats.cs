@@ -7,6 +7,7 @@ public class Stats : MonoBehaviour
 {
     public float startTime = 60f;
     public Text timer;
+    public Text counter;
 
     void Update()
     {
