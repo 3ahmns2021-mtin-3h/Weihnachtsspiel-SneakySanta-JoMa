@@ -9,6 +9,13 @@ public class Spawner : MonoBehaviour
     public Transform transformGroup;
     public float spawnNext = 3f;
     public float spawnRate = 2.5f;
+    public int presentsCollected;
+    public Text counter;
+
+    private void Start()
+    {
+        presentsCollected = 0;
+    }
 
     private void Update()
     {
@@ -17,6 +24,8 @@ public class Spawner : MonoBehaviour
             spawnNext = Time.time + spawnRate;
             Spawn();
         }
+
+        counter.text = presentsCollected.ToString();
     }
 
     private void Spawn()

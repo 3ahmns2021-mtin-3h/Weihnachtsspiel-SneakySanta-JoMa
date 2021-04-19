@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 1163151956}
   m_Layer: 5
   m_Name: Game
-  m_TagString: Untagged
+  m_TagString: Master
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -592,6 +592,8 @@ MonoBehaviour:
   transformGroup: {fileID: 1736696309}
   spawnNext: 4
   spawnRate: 3
+  presentsCollected: 0
+  counter: {fileID: 1614284601}
 --- !u!1 &1299393121
 GameObject:
   m_ObjectHideFlags: 0

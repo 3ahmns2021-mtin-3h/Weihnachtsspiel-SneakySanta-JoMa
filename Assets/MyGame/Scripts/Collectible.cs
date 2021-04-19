@@ -2,20 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectibleMovement : MonoBehaviour
+public class Collectible : MonoBehaviour
 {
     public float speed;
+    public Spawner spwnr;
 
     Rigidbody2D rb;
 
     void Awake()
     {
+        spwnr = GameObject.FindWithTag("Master").GetComponent<Spawner>();
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("collided with" + collision.name);
+        spwnr.presentsCollected++;
     }
 
     void Update()
